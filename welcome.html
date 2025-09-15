@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aimbot Pro - Welcome</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+        }
+        .glow-effect {
+            box-shadow: 0 0 15px rgba(0, 132, 255, 0.5);
+        }
+        .input-glow:focus {
+            box-shadow: 0 0 10px rgba(0, 132, 255, 0.5);
+        }
+    </style>
+</head>
+<body class="gradient-bg text-white min-h-screen">
+    <div class="container mx-auto px-4 py-16">
+        <div class="max-w-sm mx-auto bg-gray-800 rounded-xl shadow-md overflow-hidden" data-aos="fade-down">
+            <div class="p-8">
+                <div class="flex items-center justify-center mb-6">
+                    <i data-feather="crosshair" class="w-10 h-10 text-blue-400 mr-2"></i>
+                    <h1 class="text-2xl font-bold text-blue-400">AIMBOT PRO</h1>
+                </div>
+                
+                <div class="mb-8 text-center">
+                    <h2 class="text-xl font-bold mb-3">Welcome!</h2>
+                    <p class="text-gray-300 mb-4 text-sm">Please select a model to get started</p>
+                    
+                    <div class="space-y-4 mb-6">
+                        <button class="glow-effect w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded-lg transition-all text-sm">
+                            BR-1
+                        </button>
+                        <button class="glow-effect w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition-all">
+                            BR-2
+                        </button>
+                        <button class="glow-effect w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition-all">
+                            Universal
+                        </button>
+                        <button class="glow-effect w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition-all">
+                            Outline-1
+                        </button>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-md font-semibold mb-2 text-center">INPUT</h3>
+                        <div class="space-y-2">
+                            <button class="glow-effect w-full bg-gray-700 hover:bg-gray-600 text-white font-bold py-1 px-3 rounded-lg transition-all text-sm">
+                                Arduino
+                            </button>
+                            <button class="glow-effect w-full bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg transition-all">
+                                Kmbox Net
+                            </button>
+                            <button class="glow-effect w-full bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg transition-all">
+                                Kmbox B+
+                            </button>
+                            <button class="glow-effect w-full bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg transition-all">
+                                Makcu
+                            </button>
+                            <button class="glow-effect w-full bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg transition-all">
+                                Software Based OLD
+                            </button>
+                            <button class="glow-effect w-full bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg transition-all">
+                                Software Based BETA
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center text-sm text-gray-400">
+                    <p>© 2023 Aimbot Pro | Version 2.4.1</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        AOS.init();
+        feather.replace();
+        
+        // Add click handlers for model selection
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Redirect to aimbot page after selection
+                window.location.href = 'aimbot.html';
+            });
+        });
+    </script>
+</body>
+</html>
