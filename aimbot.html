@@ -41,6 +41,9 @@
             </div>
             
             <div class="space-y-2">
+                <a href="welcome.html" class="flex items-center px-4 py-2 hover:bg-gray-700 rounded-lg transition-all">
+                    <i data-feather="home" class="mr-3"></i> Welcome
+                </a>
                 <a href="aimbot.html" class="flex items-center px-4 py-2 bg-gray-700 rounded-lg text-blue-400">
                     <i data-feather="target" class="mr-3"></i> Aimbot
                 </a>
@@ -101,12 +104,23 @@
                         
                         <div class="space-y-4">
                             <div>
-                                <label class="block text-sm text-gray-300 mb-1">Aimbot Key</label>
+                                <label class="block text-sm text-gray-300 mb-1">Keybind</label>
                                 <select class="w-full bg-gray-700 border border-gray-600 rounded px-3 py-2 text-sm">
-                                    <option>Mouse 4</option>
-                                    <option>Mouse 5</option>
+                                    <option>Mouse 2</option>
+                                    <option>Mouse 1</option>
                                     <option>Left Alt</option>
                                     <option>Left Shift</option>
+                                    <option>Left Ctrl</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm text-gray-300 mb-1">Backup Keybind</label>
+                                <select class="w-full bg-gray-700 border border-gray-600 rounded px-3 py-2 text-sm">
+                                    <option>Mouse 2</option>
+                                    <option>Mouse 1</option>
+                                    <option>Left Alt</option>
+                                    <option>Left Shift</option>
+                                    <option>Left Ctrl</option>
                                 </select>
                             </div>
                             
@@ -129,7 +143,44 @@
                             </div>
                         </div>
                     </div>
-                    
+                    <!-- Humanization Settings -->
+                    <div class="bg-gray-800 rounded-lg p-5" data-aos="fade-up">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold">Humanization</h3>
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" class="sr-only peer" checked>
+                                <div class="w-11 h-6 bg-gray-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                            </label>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm text-gray-300 mb-1">Progressive Slowdown</label>
+                                <input type="range" min="1" max="100" value="45" class="slider-thumb w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer">
+                                <div class="flex justify-between text-xs text-gray-400">
+                                    <span>Low</span>
+                                    <span>High</span>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm text-gray-300 mb-1">Target Switch Delay</label>
+                                <input type="range" min="1" max="180" value="90" class="slider-thumb w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer">
+                                <div class="flex justify-between text-xs text-gray-400">
+                                    <span>Low</span>
+                                    <span>High</span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm text-gray-300 mb-1">Deadzone</label>
+                                <input type="range" min="1" max="180" value="90" class="slider-thumb w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer">
+                                <div class="flex justify-between text-xs text-gray-400">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Target Selection -->
                     <div class="bg-gray-800 rounded-lg p-5" data-aos="fade-up" data-aos-delay="100">
                         <h3 class="text-lg font-semibold mb-4">Target Selection</h3>
@@ -169,54 +220,6 @@
                         </div>
                     </div>
                     
-                    <!-- Advanced Settings -->
-                    <div class="bg-gray-800 rounded-lg p-5 md:col-span-2" data-aos="fade-up" data-aos-delay="200">
-                        <h3 class="text-lg font-semibold mb-4">Advanced Settings</h3>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <div>
-                                <label class="flex items-center space-x-2">
-                                    <input type="checkbox" class="form-checkbox h-4 w-4 text-blue-600" checked>
-                                    <span class="text-sm">Visibility Check</span>
-                                </label>
-                            </div>
-                            
-                            <div>
-                                <label class="flex items-center space-x-2">
-                                    <input type="checkbox" class="form-checkbox h-4 w-4 text-blue-600">
-                                    <span class="text-sm">Auto Fire</span>
-                                </label>
-                            </div>
-                            
-                            <div>
-                                <label class="flex items-center space-x-2">
-                                    <input type="checkbox" class="form-checkbox h-4 w-4 text-blue-600" checked>
-                                    <span class="text-sm">Auto Scope</span>
-                                </label>
-                            </div>
-                            
-                            <div>
-                                <label class="flex items-center space-x-2">
-                                    <input type="checkbox" class="form-checkbox h-4 w-4 text-blue-600">
-                                    <span class="text-sm">Silent Aim</span>
-                                </label>
-                            </div>
-                            
-                            <div>
-                                <label class="flex items-center space-x-2">
-                                    <input type="checkbox" class="form-checkbox h-4 w-4 text-blue-600" checked>
-                                    <span class="text-sm">Team Check</span>
-                                </label>
-                            </div>
-                            
-                            <div>
-                                <label class="flex items-center space-x-2">
-                                    <input type="checkbox" class="form-checkbox h-4 w-4 text-blue-600">
-                                    <span class="text-sm">Prediction</span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
