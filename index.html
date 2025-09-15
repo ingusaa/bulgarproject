@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aimbot Pro - Activation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+        }
+        .glow-effect {
+            box-shadow: 0 0 15px rgba(0, 132, 255, 0.5);
+        }
+        .input-glow:focus {
+            box-shadow: 0 0 10px rgba(0, 132, 255, 0.5);
+        }
+    </style>
+</head>
+<body class="gradient-bg text-white min-h-screen">
+    <div class="container mx-auto px-4 py-16">
+        <div class="max-w-md mx-auto bg-gray-800 rounded-xl shadow-md overflow-hidden md:max-w-2xl" data-aos="fade-down">
+            <div class="p-8">
+                <div class="flex items-center justify-center mb-8">
+                    <i data-feather="crosshair" class="w-12 h-12 text-blue-400 mr-3"></i>
+                    <h1 class="text-3xl font-bold text-blue-400">AIMBOT PRO</h1>
+                </div>
+                
+                <div class="mb-8">
+                    <h2 class="text-xl font-semibold mb-4 text-center">Activate Your License</h2>
+                    <div class="mb-4">
+                        <label class="block text-gray-300 text-sm font-bold mb-2" for="license">
+                            License Key
+                        </label>
+                        <input 
+                            class="input-glow appearance-none border-2 border-gray-700 rounded w-full py-3 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:border-blue-500 transition-all" 
+                            id="license" 
+                            type="text" 
+                            placeholder="XXXX-XXXX-XXXX-XXXX">
+                    </div>
+                    <button id="activateBtn" class="glow-effect w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition-all flex items-center justify-center">
+                        <i data-feather="key" class="mr-2"></i> Activate
+                    </button>
+                </div>
+                
+                <div class="text-center text-sm text-gray-400">
+                    <p>By activating, you agree to our Terms of Service</p>
+                    <p class="mt-1">Version 2.4.1 | © 2023 Aimbot Pro</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        AOS.init();
+        feather.replace();
+        
+        document.getElementById('activateBtn').addEventListener('click', function() {
+            const licenseKey = document.getElementById('license').value;
+            if(licenseKey && licenseKey.length >= 10) {
+                // Fake activation for demo
+                setTimeout(() => {
+                    window.location.href = 'aimbot.html';
+                }, 1000);
+            } else {
+                alert('Please enter a valid license key');
+            }
+        });
+    </script>
+</body>
+</html>
